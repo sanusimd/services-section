@@ -10,16 +10,18 @@ body {
   margin: 0 auto;
 }
 
-.container .details {
+.details {
   text-align: center;
 }
-.container .details h1 {
+ .details h2 {
+   font-size: 50px;
+   margin: 0;
 }
 
 .main-box {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  z-index: 2; 
 }
 
 .box {
@@ -30,7 +32,34 @@ body {
   border-radius: 5px;
   text-align: center;
   padding: 40px 20px;
+  position: relative;
 }
+
+.box > * {
+  position: relative;
+	z-index: 2;
+	color: #ffffff;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all ease .50s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+}
+
+.box:hover::before {
+	width: 95%;
+	height: 95%;
+	transition: all ease .50s;
+}
+
 .box .icon {
   width: 100px;
   height: 100px;
@@ -61,17 +90,17 @@ hr {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #505cfd;
+  background-color: #e74c3c;
   padding: 10px 25px;
   border-radius: 25px;
   margin-top: 25px;
   display: inline-block;
   font-weight: 600;
+  
 }
 .box a:hover{
     background-color: #243238;
 }
-
 
 .box .white-border {
   border: 1px solid #ffffff;
@@ -81,5 +110,5 @@ hr {
 }
 
 .box-blue {
-  background-color: #505cfd;
+  background-color: #e74c3c;
 }
