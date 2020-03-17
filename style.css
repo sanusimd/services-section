@@ -14,6 +14,7 @@ body {
   text-align: center;
 }
  .details h2 {
+   color:#243238;
    font-size: 50px;
    margin: 0;
 }
@@ -90,7 +91,7 @@ hr {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #e74c3c;
+  background-color: #D50000;
   padding: 10px 25px;
   border-radius: 25px;
   margin-top: 25px;
@@ -110,5 +111,5 @@ hr {
 }
 
 .box-blue {
-  background-color: #e74c3c;
+  background-color: #D50000;
 }
